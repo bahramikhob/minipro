@@ -1,0 +1,38 @@
+﻿
+1- app.UseStaticFiles();
+
+2-  install client side >add =>client side library
+
+3-use https  
+              =>app.UseHttpsRedirection();
+       "StaticFiles": {
+      "commandName": "Project",
+      "dotnetRunMessages": "true",
+      "launchBrowser": true,
+      "applicationUrl": "https://localhost:5001;http://localhost:5000",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+4- HSTS
+
+             services.AddHsts(opts => {
+                opts.MaxAge = TimeSpan.FromDays(1);
+                opts.IncludeSubDomains = true;
+            });
+
+           app.UseHsts();
+
+4-cookie   =>cookieController
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            
+            =>  services.AddDistributedMemoryCache();
+5-session   =>  app.UseSession();
+
+            services.AddSession(c =>
+            {
+                c.Cookie.IsEssential = true;
+                //c.Cookie. = TimeSpan.FromMinutes(30);
+            });
+
+          =>  set object in seeion
+

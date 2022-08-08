@@ -1,0 +1,24 @@
+﻿_Layout
+
+_ViewImports: add all need using in views  example:@using ControllerViewPro
+
+_ViewStart :به اشتراک گذاشتن لایوت برای کلیه ویو ها
+
+برای اینکه در زمان اجرا بتونیم در ویو تغییرات انجام داد و دوباره خروجی گرفت از پکیج زیر استفاده میکنیم:
+Install-Package Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation 
+             services.AddControllersWithViews().AddRazorRuntimeCompilation();
+
+injection:
+@inject ControllerViewPro.Models.Person person
+
+Write function in View
+
+ViewBag
+
+TempData:peek,keep,session
+
+<partial name="_listperson" model="null"/>
+
+@Html.Raw()
+
+@Json.Serialize(model)

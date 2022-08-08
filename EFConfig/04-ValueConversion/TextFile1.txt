@@ -1,0 +1,51 @@
+﻿The full list of built-in converters is:
+
+Converting bool properties:
+BoolToStringConverter - Bool to strings such as "Y" and "N"
+BoolToTwoValuesConverter<TProvider> - Bool to any two values
+BoolToZeroOneConverter<TProvider> - Bool to zero and one
+Converting byte array properties:
+BytesToStringConverter - Byte array to Base64-encoded string
+Any conversion that requires only a type-cast
+CastingConverter<TModel,TProvider> - Conversions that require only a type cast
+Converting char properties:
+CharToStringConverter - Char to single character string
+Converting DateTimeOffset properties:
+DateTimeOffsetToBinaryConverter - DateTimeOffset to binary-encoded 64-bit value
+DateTimeOffsetToBytesConverter - DateTimeOffset to byte array
+DateTimeOffsetToStringConverter - DateTimeOffset to string
+Converting DateTime properties:
+DateTimeToBinaryConverter - DateTime to 64-bit value including DateTimeKind
+DateTimeToStringConverter - DateTime to string
+DateTimeToTicksConverter - DateTime to ticks
+Converting enum properties:
+EnumToNumberConverter<TEnum,TNumber> - Enum to underlying number
+EnumToStringConverter<TEnum> - Enum to string
+Converting Guid properties:
+GuidToBytesConverter - Guid to byte array
+GuidToStringConverter - Guid to string
+Converting IPAddress properties:
+IPAddressToBytesConverter - IPAddress to byte array
+IPAddressToStringConverter - IPAddress to string
+Converting numeric (int, double, decimal, etc.) properties:
+NumberToBytesConverter<TNumber> - Any numerical value to byte array
+NumberToStringConverter<TNumber> - Any numerical value to string
+Converting PhysicalAddress properties:
+PhysicalAddressToBytesConverter - PhysicalAddress to byte array
+PhysicalAddressToStringConverter - PhysicalAddress to string
+Converting string properties:
+StringToBoolConverter - Strings such as "Y" and "N" to bool
+StringToBytesConverter - String to UTF8 bytes
+StringToCharConverter - String to character
+StringToDateTimeConverter - String to DateTime
+StringToDateTimeOffsetConverter - String to DateTimeOffset
+StringToEnumConverter<TEnum> - String to enum
+StringToGuidConverter - String to Guid
+StringToNumberConverter<TNumber> - String to numeric type
+StringToTimeSpanConverter - String to TimeSpan
+StringToUriConverter - String to Uri
+Converting TimeSpan properties:
+TimeSpanToStringConverter - TimeSpan to string
+TimeSpanToTicksConverter - TimeSpan to ticks
+Converting Uri properties:
+UriToStringConverter - Uri to string

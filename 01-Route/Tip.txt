@@ -1,0 +1,18 @@
+﻿             
+             نوشتن روت به صورت دستی
+
+             //www.eeee.com/mv/Nimroo
+            //www.eeee.com/mv/Omlet
+            //www.eeee.com/mv/NoonPanir
+
+            //www.eeee.com/tt/Nimroo
+            //www.eeee.com/tt/Omlet
+            //www.eeee.com/tt/NoonPanir
+
+              زمانی که به ادرس طرز تهیه کتلت میریم ریدایرکت میشه به ادرس مواد لازم نیمرو 
+            //www.eeee.com/tt/Kotlet
+
+            case "Kotlet":
+            context.Response.Redirect("/mv/Nimroo");
+            return;
+

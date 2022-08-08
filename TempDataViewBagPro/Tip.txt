@@ -1,0 +1,43 @@
+﻿tempData
+  بر مبنای سشن کار می کند
+
+            services.AddDistributedMemoryCache();
+            services.AddSession(op =>
+            {
+                op.Cookie.IsEssential = true;
+            });
+
+            app.UseSession();
+
+            تفاوت سشن و تمپ دیتا؟در سشن تازمانی زمان انقضا یا کاربر مروگرش نبندد
+             پایدار هست ولی تمپ دیتا با یکبار بار خواندن از سشن حذف می شود
+             برای جلوگیری از حذف تمپ دیتا دوتا راهکار داریم
+             1-peek
+             2-keep
+
+             peek اگر بخواهیم مثل سشن اصلا پاک نشود از 
+              TempData.peek("Count");
+
+             keep برای اینکه بعد از خواندن برای یکبار دیگه عملیات خواندن بتونیم انجام بدیم از
+             var x=TempData["Count"];
+             if()
+             { 
+                TempData.Keep("Count");
+             }
+            
+
+             اگر 
+             TempData 
+             را با استفاده از 
+             'Peek' 
+              می خوانید ، مقدار برای درخواست بعدی نیز ادامه دارد
+               var count=TempData.peek("Count");
+
+اگر 
+TempData
+را در اولین درخواست خواندید و می خواهید مقدار درخواست بعدی را حفظ کنید ، از روش
+"Keep" 
+استفاده کنید.
+
+var x=TempData["Count"];
+             TempData.Keep("Count");
